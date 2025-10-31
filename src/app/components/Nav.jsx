@@ -31,7 +31,7 @@ function Nav() {
                 href="https://weather.com/weather/hourbyhour/l/217925daf9c672edad52f0b45157a0c4ea0618ff0385f049bb0aecc21d7f3710"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-900"
+                className="text-blue-900"
               >
                 Weather
               </a>
@@ -104,7 +104,7 @@ function Nav() {
                 href="https://weather.com/weather/hourbyhour/l/217925daf9c672edad52f0b45157a0c4ea0618ff0385f049bb0aecc21d7f3710"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-900"
+                className="text-blue-900"
               >
                 Weather
               </a>
@@ -118,7 +118,7 @@ function Nav() {
                       href="https://www.britannica.com/event/Prohibition-United-States-history-1920-1933"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-red-900"
+                      className="text-blue-900"
                     >
                       Prohibition Era
                     </a>
@@ -128,7 +128,7 @@ function Nav() {
                       href="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d25226.562122423937!2d-122.41141763799904!3d37.78253359142538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shappy%20hour%20san%20francisco!5e0!3m2!1sen!2sus!4v1761891857189!5m2!1sen!2sus"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-red-900"
+                      className="text-blue-900"
                     >
                       Top 21 Happy Hours SF
                     </a>
@@ -139,7 +139,7 @@ function Nav() {
                       href="https://sf.eater.com/maps/best-happy-hours-bars-san-francisco"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-red-900"
+                      className="text-blue-900"
                     >
                       Eater SF Happy Hours
                     </a>
@@ -150,7 +150,7 @@ function Nav() {
                       href="https://www.totalhappyhour.com/san-francisco-ca-happy-hour/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-red-900"
+                      className="text-blue-900"
                     >
                       Total Happy Hour SF
                     </a>

@@ -8,6 +8,37 @@ import Nav from "./components/Nav";
 export default function Home() {
     const date = new Date();
     const today = date.toLocaleDateString([], { hour: '2-digit', minute: "2-digit" });
+
+    function calculateTimeUntil6PM() {
+      const now = new Date();
+      const sixPm = new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        now.getDate(),
+        18,
+        0,
+        0,
+        0
+      ); // 18 is 6 PM in 24-hour format
+
+      let diff = sixPm - now; // Difference in milliseconds
+
+      // If the current time is already past 6 PM, calculate until 6 PM tomorrow
+      if (diff < 0) {
+        sixPm.setDate(sixPm.getDate() + 1); // Add one day
+        diff = sixPm - now;
+      }
+
+      // Convert the milliseconds difference to hours, minutes, and seconds
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      return `${hours} hours, ${minutes} minutes, and ${seconds} seconds until 6 PM`;
+    }
+
+const timeRemaining = calculateTimeUntil6PM();
+
   const defaultMap =
     "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d25226.562122423937!2d-122.41141763799904!3d37.78253359142535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shappy%20hour%20san%20francisco!5e0!3m2!1sen!2sus!4v1761891857189!5m2!1sen!2sus";
   const [mapSrc, setMapSrc] = useState(defaultMap);
@@ -29,8 +60,14 @@ export default function Home() {
       <Nav />
       <div className="flex min-h-screen flex-col items-center justify-center font-sans dark:bg-black">
         <h1 className="max-w-xl text-3xl pt-6 font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-          Happy Hour Management {today}
+          Happy Hour Management
         </h1>
+        <p>
+          {today} 
+        </p>
+        <p className="text-red-900 animate-bounce">
+         {timeRemaining}
+        </p>
         <main className="flex w-full max-w-3xl sm:gap-4 flex-wrap flex-row items-center justify-center pt-8 px-8 bg-white dark:bg-black sm:items-start">
           <div className="flex flex-row items-center justify-between gap-6 text-center sm:items-start sm:text-left">
             {/* <h1 className="max-w-md text-xl w-[75px] font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
