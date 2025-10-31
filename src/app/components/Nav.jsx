@@ -14,13 +14,12 @@ function Nav() {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              {" "}
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 d="M4 6h16M4 12h16M4 18h7"
-              />{" "}
+              />
             </svg>
           </div>
           <ul
@@ -48,19 +47,17 @@ function Nav() {
                       rel="noopener noreferrer"
                       className="text-red-900"
                     >
-                      {" "}
-                      Prohibition Era{" "}
+                      Prohibition Era
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d25226.562122423937!2d-122.41141763799904!3d37.78253359142538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shappy%20hour%20san%20francisco!5e0!3m2!1sen!2sus!4v1761891857189!5m2!1sen!2sus"
+                      href="https://www.theinfatuation.com/san-francisco/guides/best-happy-hour-san-francisco"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-red-900"
                     >
-                      {" "}
-                      Top 21 Happy Hours SF{" "}
+                      Top 21 Happy Hours SF
                     </a>
                   </li>
 
@@ -123,8 +120,7 @@ function Nav() {
                       rel="noopener noreferrer"
                       className="text-red-900"
                     >
-                      {" "}
-                      Prohibition Era{" "}
+                      Prohibition Era
                     </a>
                   </li>
                   <li>
@@ -134,8 +130,7 @@ function Nav() {
                       rel="noopener noreferrer"
                       className="text-red-900"
                     >
-                      {" "}
-                      Top 21 Happy Hours SF{" "}
+                      Top 21 Happy Hours SF
                     </a>
                   </li>
 
