@@ -265,7 +265,8 @@ export default function Home() {
                 />
               </div>
             </div>
-          </div>
+          </div>{" "}
+          <div className="text-center mx-auto">Don't forget <span className="font-bold">Keys, wallet, purse, jacket, scarf, phone, credit card</span></div>
         </div>
       </div>
     </>
