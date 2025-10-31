@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Home() {
   const defaultMap =
-    "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d25224.962222864982!2d-122.43684581025151!3d37.78722092048541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shappy%20hours%20in%20san%20francisco%20open%20right%20now!5e0!3m2!1sen!2sus!4v1761887011419!5m2!1sen!2sus";
+    "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d25226.562122423937!2d-122.41141763799904!3d37.78253359142548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shappy%20hour%20san%20francisco!5e0!3m2!1sen!2sus!4v1761891857189!5m2!1sen!2sus";
   const [mapSrc, setMapSrc] = useState(defaultMap);
 
   const maps = {
@@ -69,7 +69,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
             <h1 className="max-w-md text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-              Happy Hours!
+              SF Happy Hours! Maps <span className="text-red-900">& Articles</span>
             </h1>
             <iframe
               src={mapSrc}
@@ -262,6 +262,7 @@ export default function Home() {
                 href="https://weather.com/weather/hourbyhour/l/217925daf9c672edad52f0b45157a0c4ea0618ff0385f049bb0aecc21d7f3710"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-red-900"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -288,6 +289,7 @@ export default function Home() {
                 href="https://www.britannica.com/event/Prohibition-United-States-history-1920-1933"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-red-900"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -309,6 +311,72 @@ export default function Home() {
                   <path d="M6 8h2" />
                 </svg>
                 <span className="text-xs mr-1">Article</span>
+              </a>
+              <a
+                href="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d25226.562122423937!2d-122.41141763799904!3d37.78253359142548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shappy%20hour%20san%20francisco!5e0!3m2!1sen!2sus!4v1761891857189!5m2!1sen!2sus"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-900"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-star-icon lucide-star"
+                >
+                  <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                </svg>
+                <span className="text-xs mr-1">Top 21</span>
+              </a>
+              <a
+                href="https://sf.eater.com/maps/best-happy-hours-bars-san-francisco"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-900"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-star-icon lucide-star"
+                >
+                  <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                </svg>
+                <span className="text-xs mr-1">Eater</span>
+              </a>
+              <a
+                href="https://www.totalhappyhour.com/san-francisco-ca-happy-hour/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-900 mr-1"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-star-icon lucide-star"
+                >
+                  <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                </svg>
+                <span className="text-xs mr-1">HH</span>
               </a>
             </div>
           </div>
