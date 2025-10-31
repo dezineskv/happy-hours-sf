@@ -6,6 +6,8 @@ import Link from "next/link";
 import Nav from "./components/Nav";
 
 export default function Home() {
+    const date = new Date();
+    const today = date.toLocaleDateString([], { hour: '2-digit', minute: "2-digit" });
   const defaultMap =
     "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d25226.562122423937!2d-122.41141763799904!3d37.78253359142535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shappy%20hour%20san%20francisco!5e0!3m2!1sen!2sus!4v1761891857189!5m2!1sen!2sus";
   const [mapSrc, setMapSrc] = useState(defaultMap);
@@ -27,7 +29,7 @@ export default function Home() {
       <Nav />
       <div className="flex min-h-screen flex-col items-center justify-center font-sans dark:bg-black">
         <h1 className="max-w-xl text-3xl pt-6 font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-          Happy Hour Management
+          Happy Hour Management {today}
         </h1>
         <main className="flex w-full max-w-3xl sm:gap-4 flex-wrap flex-row items-center justify-center pt-8 px-8 bg-white dark:bg-black sm:items-start">
           <div className="flex flex-row items-center justify-between gap-6 text-center sm:items-start sm:text-left">
@@ -266,7 +268,13 @@ export default function Home() {
               </div>
             </div>
           </div>{" "}
-          <div className="text-center mx-auto">Don't forget <span className="font-bold">Keys, wallet, purse, jacket, scarf, phone, credit card</span></div>
+          <div className="text-center mx-auto">
+            Don't forget&nbsp;
+            <span className="font-bold">
+              Keys, phone, credit card, wallet, purse, jacket, scarf, hat,
+              earbuds, umbrella, backpacke, food, etc.
+            </span>
+          </div>
         </div>
       </div>
     </>
