@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import ThemeToggle from './ThemeToggle';
 
 function Nav() {
   return (
@@ -26,6 +27,9 @@ function Nav() {
             tabIndex="-1"
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
+            <li className="">
+              <ThemeToggle />
+            </li>
             <li>
               <a
                 href="https://weather.com/weather/hourbyhour/l/217925daf9c672edad52f0b45157a0c4ea0618ff0385f049bb0aecc21d7f3710"
@@ -36,6 +40,7 @@ function Nav() {
                 Weather
               </a>
             </li>
+
             <li>
               <details>
                 <summary>Articles</summary>
@@ -118,6 +123,9 @@ function Nav() {
         {/* desktop */}
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
+            <li>
+              <ThemeToggle />
+            </li>
             <li>
               <a
                 href="https://weather.com/weather/hourbyhour/l/217925daf9c672edad52f0b45157a0c4ea0618ff0385f049bb0aecc21d7f3710"

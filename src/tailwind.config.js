@@ -1,5 +1,7 @@
 // tailwind.config.js
 module.exports = {
+  darkMode: ["selector", '[data-theme="dark"]'], // Important for DaisyUI theme switching
+
   theme: {
     extend: {
       animation: {
@@ -13,5 +15,9 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  daisyui: {
+    themes: ["light", "dark"], // Enable light and dark themes
+    defaultTheme: "light", // Optional: set a default theme
+  },
+  plugins: [require("daisyui")],
 };

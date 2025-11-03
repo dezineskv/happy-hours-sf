@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <div className="flex min-h-screen flex-col items-center justify-center font-sans dark:bg-black">
+      <div className="flex min-h-screen flex-col items-center justify-center font-sans bg-background ">
         <h1 className="max-w-xl text-3xl pt-6 font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
           Happy Hour Management
         </h1>
