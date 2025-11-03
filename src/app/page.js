@@ -80,17 +80,17 @@ export default function Home() {
         >
    Refresh
  </button> */}
-<p className="text-red-900 animate-bounce">{timeRemaining}</p>
-<button
-  onClick={() => setTimeRemaining(calculateTimeUntil6PM())}
-  className="bg-red-600 px-2 py-1 text-sm rounded-lg text-white"
->
-  Refresh Timer
-</button>
+        <p className="text-red-900 animate-bounce">{timeRemaining}</p>
+        <button
+          onClick={() => setTimeRemaining(calculateTimeUntil6PM())}
+          className="bg-red-600 px-2 py-1 text-sm rounded-lg text-white"
+        >
+          Refresh Timer
+        </button>
         <main className="flex w-full max-w-3xl sm:gap-4 flex-wrap flex-row items-center justify-center pt-4 px-8 bg-white dark:bg-black sm:items-start">
-          <div className="flex flex-row items-center justify-between gap-6 text-center sm:items-start sm:text-left">
+          <div className="w-full flex flex-row items-center sm:justify-center md:justify-between gap-5 text-center sm:items-start sm:text-left">
             {/* buttons */}
-            <div className="flex flex-row items-center justify-between text-base font-medium py-2 gap-2">
+            <div className="flex flex-row items-center sm:justify-center md:justify-between  text-base font-medium py-2 gap-1">
               <button
                 onClick={() => setMapSrc(maps.happy)}
                 className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
@@ -193,7 +193,7 @@ export default function Home() {
 
               <button
                 onClick={() => setMapSrc(maps.burger)}
-                className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
+                className="pl-3 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
                 aria-label="Show burger spots"
               >
                 <svg
@@ -213,7 +213,7 @@ export default function Home() {
                   <path d="M5 16a2 2 0 0 0-2 2 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 2 2 0 0 0-2-2q0 0 0 0" />
                   <path d="m6.67 12 6.13 4.6a2 2 0 0 0 2.8-.4l3.15-4.2" />
                 </svg>
-                <span className="text-xs">Snacks</span>
+                <span className="text-xs pr-1">Snacks</span>
               </button>
             </div>
 
