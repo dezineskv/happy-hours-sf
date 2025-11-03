@@ -89,10 +89,10 @@ export default function Home() {
         >
           Refresh Timer
         </button>
-        <main className="flex min-w-screen gap-3 flex-wrap flex-row items-center justify-center pt-4 sm:px-8 bg-background dark:bg-black sm:items-start">
-          <div className="w-full flex flex-row items-center justify-center gap-3 text-center">
+        <main className="flex min-w-screen gap-3 flex-wrap flex-row items-center justify-center pt-4 sm:px-8  sm:ml-8">
+          <div className="w-full flex flex-row items-center justify-center gap-3 text-center ">
             {/* buttons */}
-            <div className="flex flex-row flex-wrap items-center sm:justify-center md:justify-between  text-base font-medium mx-auto py-2 gap-2">
+            <div className="flex flex-row flex-wrap items-center sm:justify-center md:justify-between  text-base font-medium mx-auto  py-2 gap-2">
               <button
                 onClick={() => setMapSrc(maps.happy)}
                 className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
@@ -232,7 +232,7 @@ export default function Home() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="lucide lucide-martini-icon lucide-martini text-blue-500"
+                  className="lucide lucide-martini-icon lucide-martini text-gray-500"
                 >
                   <path d="M8 22h8" />
                   <path d="M12 11v11" />
@@ -255,7 +255,7 @@ export default function Home() {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-chef-hat-icon lucide-chef-hat text-blue-500"
+                  class="lucide lucide-chef-hat-icon lucide-chef-hat text-gray-500"
                 >
                   <path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z" />
                   <path d="M6 17h12" />
@@ -322,12 +322,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="text-center mx-auto sm:px-8">
+          <div className="text-center mx-auto sm:px-8 sm:mx-8">
+                        <p className="text-sm mt-4 px-8">
+
             Don't forget&nbsp;
             <span className="font-bold">
               Keys, phone, credit card, wallet, purse, jacket, scarf, hat,
               earbuds, umbrella, backpack, food, etc.
-            </span>
+            </span></p>
             <p className="text-sm mt-4 px-8">
               Myth? Beer before wine, and you'll feel fine. Liquor before beer,
               you're in the clear
