@@ -4,10 +4,9 @@ import ThemeToggle from './ThemeToggle';
 
 function Nav() {
   return (
-    <div>
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar bg-base-100 text-gray-700 dark:text-gray-700 min-w-screen shadow-sm">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle text-foreground">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -27,7 +26,7 @@ function Nav() {
             tabIndex="-1"
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li className="">
+            <li className="text-gray-700 dark:text-gray-700">
               <ThemeToggle />
             </li>
             <li>
@@ -208,7 +207,6 @@ function Nav() {
           </ul>
         </div>
       </div>
-    </div>
   );
 }
 

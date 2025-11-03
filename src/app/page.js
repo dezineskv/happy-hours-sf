@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <div className="flex min-h-screen flex-col items-center justify-center font-sans bg-background ">
+      <div className="flex sm:w-full min-w-screen min-h-screen flex-col items-center justify-center font-sans bg-background ">
         <h1 className="max-w-xl text-3xl pt-6 font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
           Happy Hour Management
         </h1>
@@ -83,11 +83,11 @@ export default function Home() {
         <p className="text-red-900 animate-bounce">{timeRemaining}</p>
         <button
           onClick={() => setTimeRemaining(calculateTimeUntil6PM())}
-          className="bg-red-600 px-2 py-1 text-sm rounded-lg text-white"
+          className="bg-red-600 px-2 py-1 text-sm rounded-lg text-foreground"
         >
           Refresh Timer
         </button>
-        <main className="flex w-full max-w-3xl sm:gap-4 flex-wrap flex-row items-center justify-center pt-4 px-8 bg-white dark:bg-black sm:items-start">
+        <main className="flex min-w-screen sm:gap-4 flex-wrap flex-row items-center justify-center pt-4 sm:px-8 bg-background dark:bg-black sm:items-start">
           <div className="w-full flex flex-row items-center justify-center gap-5 text-center sm:items-start sm:text-left">
             {/* buttons */}
             <div className="flex flex-row items-center sm:justify-center md:justify-between  text-base font-medium py-2 gap-1">
@@ -266,20 +266,20 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="flex items-center justify-between text-base mt-2 py-2 sm:max-w-sm md:max-w-3xl">
+          <div className="flex items-center justify-between text-base mt-2 py-2 min-h-[300px] max-h-[450px] w-full">
             <iframe
               src={mapSrc}
-              width="600"
-              height="450"
+              width="100%"
+              height="100%"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="rounded shadow-md"
+              className="rounded shadow-md min-h-[300px] max-h-[450px]"
               title="maps"
             ></iframe>
           </div>
         </main>
-        <div className="flex w-full max-w-2xl flex-col items-center justify-center py-10 px-8 bg-white dark:bg-black mx-auto">
+        <div className="flex min-w-screen flex-col items-center justify-center py-10 sm:px-8 bg-background dark:bg-black mx-auto">
           <div className="avatar-group -space-x-6 mb-6">
             <div className="avatar">
               <div className="w-12">
