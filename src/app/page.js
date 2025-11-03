@@ -70,7 +70,7 @@ export default function Home() {
     <>
       <Nav />
       <div className="flex sm:w-full min-w-screen min-h-screen flex-col items-center justify-center font-sans bg-background ">
-        <h1 className="max-w-xl text-3xl pt-6 font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+        <h1 className="max-w-xl text-3xl pt-6 font-semibold leading-10 tracking-tight text-black dark:text-zinc-50 mx-auto text-center">
           Happy Hour Management
         </h1>
         <p>{today}</p>
@@ -80,17 +80,19 @@ export default function Home() {
         >
    Refresh
  </button> */}
-        <p className="text-red-900 animate-bounce">{timeRemaining}</p>
+        <p className="text-red-900 animate-bounce text-center">
+          {timeRemaining}
+        </p>
         <button
           onClick={() => setTimeRemaining(calculateTimeUntil6PM())}
-          className="bg-red-600 px-2 py-1 text-sm rounded-lg text-foreground"
+          className="bg-red-600 px-2 py-1 text-xs rounded-lg text-foreground"
         >
           Refresh Timer
         </button>
-        <main className="flex min-w-screen sm:gap-4 flex-wrap flex-row items-center justify-center pt-4 sm:px-8 bg-background dark:bg-black sm:items-start">
-          <div className="w-full flex flex-row items-center justify-center gap-5 text-center sm:items-start sm:text-left">
+        <main className="flex min-w-screen gap-3 flex-wrap flex-row items-center justify-center pt-4 sm:px-8 bg-background dark:bg-black sm:items-start">
+          <div className="w-full flex flex-row items-center justify-center gap-3 text-center">
             {/* buttons */}
-            <div className="flex flex-row items-center sm:justify-center md:justify-between  text-base font-medium py-2 gap-1">
+            <div className="flex flex-row flex-wrap items-center sm:justify-center md:justify-between  text-base font-medium mx-auto py-2 gap-2">
               <button
                 onClick={() => setMapSrc(maps.happy)}
                 className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
@@ -215,10 +217,6 @@ export default function Home() {
                 </svg>
                 <span className="text-xs pr-1">Snacks</span>
               </button>
-            </div>
-
-            {/* after happy hour */}
-            <div className="flex flex-row gap-1 items-center justify-between text-base font-medium py-2 ">
               <button
                 onClick={() => setMapSrc(maps.trash)}
                 className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
@@ -266,7 +264,8 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="flex items-center justify-between text-base mt-2 py-2 min-h-[300px] max-h-[450px] w-full">
+          {/* map */}
+          <div className="flex items-center justify-between text-base mt-2 py-2 min-h-[300px] max-h-[450px] sm:max-w-[300px] min-w-screen ">
             <iframe
               src={mapSrc}
               width="100%"
@@ -274,11 +273,12 @@ export default function Home() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="rounded shadow-md min-h-[300px] max-h-[450px]"
+              className="rounded shadow-md min-h-[300px] max-h-[450px] "
               title="maps"
             ></iframe>
           </div>
         </main>
+        {/* text */}
         <div className="flex min-w-screen flex-col items-center justify-center py-10 sm:px-8 bg-background dark:bg-black mx-auto">
           <div className="avatar-group -space-x-6 mb-6">
             <div className="avatar">
@@ -321,18 +321,18 @@ export default function Home() {
                 />
               </div>
             </div>
-          </div>{" "}
-          <div className="text-center mx-auto">
+          </div>
+          <div className="text-center mx-auto sm:px-8">
             Don't forget&nbsp;
             <span className="font-bold">
               Keys, phone, credit card, wallet, purse, jacket, scarf, hat,
               earbuds, umbrella, backpack, food, etc.
             </span>
-            <p className="text-sm mt-4">
+            <p className="text-sm mt-4 px-8">
               Myth? Beer before wine, and you'll feel fine. Liquor before beer,
               you're in the clear
             </p>
-            <p className="text-sm text-left mt-4">
+            <p className="text-sm text-left mt-4 px-8">
               <span className="font-bold pb-2">1-2-3 rule for moderation</span>
               <br />
               <span className="font-bold">1</span> drink per hour: Allows your
