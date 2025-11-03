@@ -88,7 +88,7 @@ export default function Home() {
           Refresh Timer
         </button>
         <main className="flex w-full max-w-3xl sm:gap-4 flex-wrap flex-row items-center justify-center pt-4 px-8 bg-white dark:bg-black sm:items-start">
-          <div className="w-full flex flex-row items-center sm:justify-center md:justify-between gap-5 text-center sm:items-start sm:text-left">
+          <div className="w-full flex flex-row items-center justify-center gap-5 text-center sm:items-start sm:text-left">
             {/* buttons */}
             <div className="flex flex-row items-center sm:justify-center md:justify-between  text-base font-medium py-2 gap-1">
               <button

@@ -115,6 +115,7 @@ function Nav() {
             />
           </a>
         </div>
+        {/* desktop */}
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
             <li>
@@ -178,7 +179,7 @@ function Nav() {
                       href="https://www.byrdie.com/healthiest-alcoholic-drinks-5183917"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-red-900"
+                      className="text-blue-900"
                     >
                       Healthiest Alcoholic Drinks
                     </a>
@@ -188,7 +189,7 @@ function Nav() {
                       href="https://my.clevelandclinic.org/health/diseases/16627-hangover"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-red-900"
+                      className="text-blue-900"
                     >
                       Hangovers
                     </a>
