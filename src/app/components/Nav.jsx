@@ -60,7 +60,6 @@ function Nav() {
                       Top 21 Happy Hours SF
                     </a>
                   </li>
-
                   <li>
                     <a
                       href="https://sf.eater.com/maps/best-happy-hours-bars-san-francisco"
@@ -71,7 +70,6 @@ function Nav() {
                       Eater SF Happy Hours
                     </a>
                   </li>
-
                   <li>
                     <a
                       href="https://www.totalhappyhour.com/san-francisco-ca-happy-hour/"
@@ -80,6 +78,26 @@ function Nav() {
                       className="text-red-900"
                     >
                       Total Happy Hour SF
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.byrdie.com/healthiest-alcoholic-drinks-5183917"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-red-900"
+                    >
+                      Healthiest Alcoholic Drinks
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://my.clevelandclinic.org/health/diseases/16627-hangover"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-red-900"
+                    >
+                      Hangovers
                     </a>
                   </li>
                 </ul>
@@ -153,6 +171,26 @@ function Nav() {
                       className="text-blue-900"
                     >
                       Total Happy Hour SF
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.byrdie.com/healthiest-alcoholic-drinks-5183917"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-red-900"
+                    >
+                      Healthiest Alcoholic Drinks
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://my.clevelandclinic.org/health/diseases/16627-hangover"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-red-900"
+                    >
+                      Hangovers
                     </a>
                   </li>
                 </ul>

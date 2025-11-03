@@ -1,43 +1,54 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import "@/app/globals.css";
 import Link from "next/link";
 import Nav from "./components/Nav";
 
 export default function Home() {
-    const date = new Date();
-    const today = date.toLocaleDateString([], { hour: '2-digit', minute: "2-digit" });
+  const [timeRemaining, setTimeRemaining] = useState(calculateTimeUntil6PM());
+  const date = new Date();
+  const today = date.toLocaleDateString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 
-    function calculateTimeUntil6PM() {
-      const now = new Date();
-      const sixPm = new Date(
-        now.getFullYear(),
-        now.getMonth(),
-        now.getDate(),
-        18,
-        0,
-        0,
-        0
-      ); // 18 is 6 PM in 24-hour format
+  function calculateTimeUntil6PM() {
+    const now = new Date();
+    const sixPm = new Date(
+      now.getFullYear(),
+      now.getMonth(),
+      now.getDate(),
+      18,
+      0,
+      0,
+      0
+    ); // 18 is 6 PM in 24-hour format
 
-      let diff = sixPm - now; // Difference in milliseconds
+    let diff = sixPm - now; // Difference in milliseconds
 
-      // If the current time is already past 6 PM, calculate until 6 PM tomorrow
-      if (diff < 0) {
-        sixPm.setDate(sixPm.getDate() + 1); // Add one day
-        diff = sixPm - now;
-      }
-
-      // Convert the milliseconds difference to hours, minutes, and seconds
-      const hours = Math.floor(diff / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      return `${hours} hours, ${minutes} minutes, and ${seconds} seconds until 6 PM`;
+    // If the current time is already past 6 PM, calculate until 6 PM tomorrow
+    if (diff < 0) {
+      sixPm.setDate(sixPm.getDate() + 1); // Add one day
+      diff = sixPm - now;
     }
 
-const timeRemaining = calculateTimeUntil6PM();
+    // Convert the milliseconds difference to hours, minutes, and seconds
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    return `${hours} hours, ${minutes} minutes, and ${seconds} seconds until 6 PM`;
+  }
+
+  // const timeRemaining = calculateTimeUntil6PM();
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setTimeRemaining(calculateTimeUntil6PM());
+    }, 1000); // update every second
+    return () => clearInterval(id);
+  }, []);
 
   const defaultMap =
     "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d25226.562122423937!2d-122.41141763799904!3d37.78253359142535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shappy%20hour%20san%20francisco!5e0!3m2!1sen!2sus!4v1761891857189!5m2!1sen!2sus";
@@ -62,21 +73,27 @@ const timeRemaining = calculateTimeUntil6PM();
         <h1 className="max-w-xl text-3xl pt-6 font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
           Happy Hour Management
         </h1>
-        <p>
-          {today} 
-        </p>
-        <p className="text-red-900 animate-bounce">
-         {timeRemaining}
-        </p>
-        <main className="flex w-full max-w-3xl sm:gap-4 flex-wrap flex-row items-center justify-center pt-8 px-8 bg-white dark:bg-black sm:items-start">
+        <p>{today}</p>
+        {/* <button
+          onClick={() => calculateTimeUntil6PM()}
+          className="bg-red-600 px-2 py-1 text-sm rounded-lg text-white"
+        >
+   Refresh
+ </button> */}
+<p className="text-red-900 animate-bounce">{timeRemaining}</p>
+<button
+  onClick={() => setTimeRemaining(calculateTimeUntil6PM())}
+  className="bg-red-600 px-2 py-1 text-sm rounded-lg text-white"
+>
+  Refresh Timer
+</button>
+        <main className="flex w-full max-w-3xl sm:gap-4 flex-wrap flex-row items-center justify-center pt-4 px-8 bg-white dark:bg-black sm:items-start">
           <div className="flex flex-row items-center justify-between gap-6 text-center sm:items-start sm:text-left">
-            {/* <h1 className="max-w-md text-xl w-[75px] font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-              Maps
-            </h1> */}
-            <div className="flex flex-row items-center justify-between text-base font-medium py-2 border rounded">
+            {/* buttons */}
+            <div className="flex flex-row items-center justify-between text-base font-medium py-2 gap-2">
               <button
                 onClick={() => setMapSrc(maps.happy)}
-                className="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-900"
+                className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
                 aria-label="Show happy spots"
               >
                 <svg
@@ -101,7 +118,7 @@ const timeRemaining = calculateTimeUntil6PM();
 
               <button
                 onClick={() => setMapSrc(maps.beer)}
-                className="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-900"
+                className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
                 aria-label="Show beer spots"
               >
                 <svg
@@ -127,7 +144,7 @@ const timeRemaining = calculateTimeUntil6PM();
 
               <button
                 onClick={() => setMapSrc(maps.martini)}
-                className="pl-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-900"
+                className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
                 aria-label="Show martini spots"
               >
                 <svg
@@ -151,7 +168,7 @@ const timeRemaining = calculateTimeUntil6PM();
 
               <button
                 onClick={() => setMapSrc(maps.wine)}
-                className="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-900"
+                className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
                 aria-label="Show wine spots"
               >
                 <svg
@@ -176,7 +193,7 @@ const timeRemaining = calculateTimeUntil6PM();
 
               <button
                 onClick={() => setMapSrc(maps.burger)}
-                className="pl-5 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-900"
+                className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
                 aria-label="Show burger spots"
               >
                 <svg
@@ -196,15 +213,15 @@ const timeRemaining = calculateTimeUntil6PM();
                   <path d="M5 16a2 2 0 0 0-2 2 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 2 2 0 0 0-2-2q0 0 0 0" />
                   <path d="m6.67 12 6.13 4.6a2 2 0 0 0 2.8-.4l3.15-4.2" />
                 </svg>
-                <span className="text-xs pr-2">Snacks</span>
+                <span className="text-xs">Snacks</span>
               </button>
             </div>
 
             {/* after happy hour */}
-            <div className="flex flex-row gap-1 items-center justify-between text-base font-medium py-2 border rounded">
+            <div className="flex flex-row gap-1 items-center justify-between text-base font-medium py-2 ">
               <button
                 onClick={() => setMapSrc(maps.trash)}
-                className="pl-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-900"
+                className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
                 aria-label="Show open bars"
               >
                 <svg
@@ -217,7 +234,7 @@ const timeRemaining = calculateTimeUntil6PM();
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="lucide lucide-martini-icon lucide-martini"
+                  className="lucide lucide-martini-icon lucide-martini text-blue-500"
                 >
                   <path d="M8 22h8" />
                   <path d="M12 11v11" />
@@ -227,7 +244,7 @@ const timeRemaining = calculateTimeUntil6PM();
               </button>
               <button
                 onClick={() => setMapSrc(maps.dine)}
-                className="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-zinc-900"
+                className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
                 aria-label="Show open restaurants"
               >
                 <svg
@@ -240,7 +257,7 @@ const timeRemaining = calculateTimeUntil6PM();
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-chef-hat-icon lucide-chef-hat"
+                  class="lucide lucide-chef-hat-icon lucide-chef-hat text-blue-500"
                 >
                   <path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z" />
                   <path d="M6 17h12" />
@@ -309,8 +326,23 @@ const timeRemaining = calculateTimeUntil6PM();
             Don't forget&nbsp;
             <span className="font-bold">
               Keys, phone, credit card, wallet, purse, jacket, scarf, hat,
-              earbuds, umbrella, backpacke, food, etc.
+              earbuds, umbrella, backpack, food, etc.
             </span>
+            <p className="text-sm mt-4">
+              Myth? Beer before wine, and you'll feel fine. Liquor before beer,
+              you're in the clear
+            </p>
+            <p className="text-sm text-left mt-4">
+              <span className="font-bold pb-2">1-2-3 rule for moderation</span>
+              <br />
+              <span className="font-bold">1</span> drink per hour: Allows your
+              body time to metabolize alcohol. <br />
+              <span className="font-bold">2</span> drinks per occasion: Limits
+              consumption during a single event. <br />
+              <span className="font-bold">3</span> drinks per day: A cap to
+              reduce health risks, though it's often suggested that some days
+              should have no alcohol at all.
+            </p>
           </div>
         </div>
       </div>
