@@ -74,6 +74,7 @@ export default function Home() {
           Happy Hour Management
         </h1>
         <p>{today}</p>
+
         {/* <button
           onClick={() => calculateTimeUntil6PM()}
           className="bg-red-600 px-2 py-1 text-sm rounded-lg text-white"
@@ -265,7 +266,7 @@ export default function Home() {
             </div>
           </div>
           {/* map */}
-          <div className="flex items-center justify-between text-base mt-2 py-2 min-h-[300px] max-h-[450px] sm:max-w-[300px] md:max-w-[850px]">
+          <div className="flex items-center justify-between text-base mt-2 py-2 min-h-[300px] max-h-[450px] md:min-w-[350px] md:max-w-[850px]">
             <iframe
               src={mapSrc}
               width="100%"
@@ -273,7 +274,7 @@ export default function Home() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="rounded shadow-md min-h-[300px] max-h-[450px] "
+              className="rounded shadow-md min-h-[300px] max-h-[450px] md:min-w-[350px]"
               title="maps"
             ></iframe>
           </div>
@@ -322,6 +323,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/* reminders */}
           <div className="text-center mx-auto sm:px-8 sm:mx-8">
             <p className="text-sm text-white mt-4 px-8">
               Don't forget&nbsp;
@@ -345,6 +347,7 @@ export default function Home() {
               reduce health risks, though it's often suggested that some days
               should have no alcohol at all.
             </p>
+            <div className="sharethis-inline-reaction-buttons mt-6 h-20"></div>
           </div>
         </div>
       </div>
