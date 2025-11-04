@@ -70,7 +70,7 @@ export default function Home() {
     <>
       <Nav />
       <div className="flex sm:w-full min-w-screen min-h-screen flex-col items-center justify-center font-sans bg-background ">
-        <h1 className="max-w-xl text-3xl pt-6 font-semibold leading-10 tracking-tight text-black dark:text-zinc-50 mx-auto text-center">
+        <h1 className="max-w-xl text-3xl pt-6 font-semibold leading-10 tracking-tight text-white dark:text-gray-300 mx-auto text-center">
           Happy Hour Management
         </h1>
         <p>{today}</p>
@@ -95,7 +95,7 @@ export default function Home() {
             <div className="flex flex-row flex-wrap items-center sm:justify-center md:justify-between  text-base font-medium mx-auto  py-2 gap-2">
               <button
                 onClick={() => setMapSrc(maps.happy)}
-                className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
+                className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white"
                 aria-label="Show happy spots"
               >
                 <svg
@@ -120,7 +120,7 @@ export default function Home() {
 
               <button
                 onClick={() => setMapSrc(maps.beer)}
-                className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
+                className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white"
                 aria-label="Show beer spots"
               >
                 <svg
@@ -146,7 +146,7 @@ export default function Home() {
 
               <button
                 onClick={() => setMapSrc(maps.martini)}
-                className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
+                className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white"
                 aria-label="Show martini spots"
               >
                 <svg
@@ -170,7 +170,7 @@ export default function Home() {
 
               <button
                 onClick={() => setMapSrc(maps.wine)}
-                className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
+                className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white"
                 aria-label="Show wine spots"
               >
                 <svg
@@ -195,7 +195,7 @@ export default function Home() {
 
               <button
                 onClick={() => setMapSrc(maps.burger)}
-                className="pl-3 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
+                className="pl-3 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white"
                 aria-label="Show burger spots"
               >
                 <svg
@@ -265,7 +265,7 @@ export default function Home() {
             </div>
           </div>
           {/* map */}
-          <div className="flex items-center justify-between text-base mt-2 py-2 min-h-[300px] max-h-[450px] sm:max-w-[300px] min-w-screen ">
+          <div className="flex items-center justify-between text-base mt-2 py-2 min-h-[300px] max-h-[450px] sm:max-w-[300px] md:max-w-[850px]">
             <iframe
               src={mapSrc}
               width="100%"
@@ -323,13 +323,13 @@ export default function Home() {
             </div>
           </div>
           <div className="text-center mx-auto sm:px-8 sm:mx-8">
-                        <p className="text-sm mt-4 px-8">
-
-            Don't forget&nbsp;
-            <span className="font-bold">
-              Keys, phone, credit card, wallet, purse, jacket, scarf, hat,
-              earbuds, umbrella, backpack, food, etc.
-            </span></p>
+            <p className="text-sm text-white mt-4 px-8">
+              Don't forget&nbsp;
+              <span className="font-bold">
+                Keys, phone, credit card, wallet, purse, jacket, scarf, hat,
+                earbuds, umbrella, backpack, food, etc.
+              </span>
+            </p>
             <p className="text-sm mt-4 px-8">
               Myth? Beer before wine, and you'll feel fine. Liquor before beer,
               you're in the clear

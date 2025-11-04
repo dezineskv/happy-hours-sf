@@ -1,11 +1,11 @@
 @import "tailwindcss";
- @plugin "daisyui" {
-   themes: light --default, dark --prefersdark;
- }
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, synthwave;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
+  --background: #09002f;
+  --foreground: #989898;
 }
 
 @theme inline {
