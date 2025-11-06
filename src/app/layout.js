@@ -22,9 +22,10 @@ export default function RootLayout({ children }) {
         <ThemeProvider
           attribute="data-theme"
           defaultTheme="synthwave"
-          // enableSystem={false}
+          enableSystem
+          disableTransitionOnChange
         >
-          {children}
+ {children}
         </ThemeProvider>
       </body>
     </html>
