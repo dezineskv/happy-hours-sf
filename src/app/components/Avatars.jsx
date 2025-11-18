@@ -55,11 +55,11 @@ function Avatars() {
             earbuds, umbrella, backpack, food, etc.
           </span>
         </p>
-        <p className="text-sm mt-4 px-8">
+        <p className="text-sm text-white mt-4 px-8">
           Myth? Beer before wine, and you'll feel fine. Liquor before beer,
           you're in the clear
         </p>
-        <p className="text-sm text-left mt-4 px-8">
+        <p className="text-sm text-white text-left mt-4 px-8">
           <span className="font-bold pb-2">1-2-3 rule for moderation</span>
           <br />
           <span className="font-bold">1</span> drink per hour: Allows your body
