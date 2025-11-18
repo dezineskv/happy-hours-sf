@@ -23,7 +23,7 @@ function Homer() {
     dine: "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d25224.967119567278!2d-122.4371891949795!3d37.78720657505475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srestaurants%20open%20near%20me!5e0!3m2!1sen!2sus!4v1761890308403!5m2!1sen!2sus",
   };
   return (
-    <main className=" dark:bg-black flex min-w-screen gap-3 flex-wrap flex-row items-center justify-center pt-4 sm:px-8  sm:ml-8">
+    <main className=" dark:bg-black flex min-w-screen gap-3 flex-wrap flex-row items-center justify-center pt-4 px-8">
       <div className="w-full flex flex-row items-center justify-center gap-3 text-center ">
         {/* buttons */}
         <div className="flex flex-row flex-wrap items-center sm:justify-center md:justify-between  text-base font-medium mx-auto  py-2 gap-2">
