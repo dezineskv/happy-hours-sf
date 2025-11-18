@@ -19,7 +19,7 @@ export default function App() {
           hide: true,
         }}
         modules={[Scrollbar]}
-        className="mySwiper mt-6"
+        className="mySwiper mt-6 max-w-[75%] mx-auto"
       >
         <SwiperSlide>
           <img
@@ -52,19 +52,7 @@ export default function App() {
             alt="swiper"
           />
         </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://media.istockphoto.com/id/991732782/photo/close-up-of-sommelier-serving-red-wine-at-fine-dining-restaurant.webp?a=1&b=1&s=612x612&w=0&k=20&c=tGFTa__aUn1A93g-4E9olsAhypFI2riQ3VvifUxNyzw="
-            alt="swiper"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://images.unsplash.com/photo-1671713682257-359a1baf806e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFydGluaXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=400"
-            alt="swiper"
-            className="w-[250px] h-[167px] overflow-hidden"
-          />
-        </SwiperSlide>
+
       </Swiper>
     </>
   );

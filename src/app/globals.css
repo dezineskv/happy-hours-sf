@@ -16,6 +16,13 @@
   --background: oklch(24.459% 0.09214 286.254);
   --foreground: oklch(69.773% 0.00565 248.229);
 }
+.swiper-wrapper {
+  width: 75%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
 .swiper {
   width: 75%;
   max-height: 200px;

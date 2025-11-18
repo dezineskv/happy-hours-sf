@@ -26,7 +26,7 @@ function ThemeToggle() {
   };
 
   return (
-    <label className="swap swap-rotate bg-gray-200">
+    <label className="swap rounded-md swap-rotate bg-gray-200">
       <input
         type="checkbox"
         onChange={toggleTheme}
@@ -36,7 +36,7 @@ function ThemeToggle() {
         <Moon />
       </div>
       {/* Dark mode icon */}
-      <div className="swap-off bg-gray-200 text-black dark:text-white">
+      <div className="swap-off bg-gray-200 text-black dark:text-white ">
         <SunMedium className="text-black dark:text-white" />
       </div>
       {/* Light mode icon */}
