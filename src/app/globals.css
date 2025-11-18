@@ -13,15 +13,16 @@
 }
 
 :root {
-  --background: oklch(24.459% 0.09214 286.254);
+  --background: oklch(24.366% 0.08824 274.208 / 0.197);
   --foreground: oklch(69.773% 0.00565 248.229);
 }
 .swiper-wrapper {
   width: 75%;
-  padding-top: 50px;
   padding-bottom: 50px;
   display: flex;
   justify-content: center;
+  max-width: 75%;
+  min-height: 200px;
 }
 .swiper {
   width: 75%;
@@ -33,7 +34,9 @@
   font-size: 18px;
   background: #444;
   max-width: 250px;
-  max-height: 200px;
+ height: 200px;
+  margin: 0 auto 6rem auto;
+  padding-bottom: 6rem;
 
   /* Center slide text vertically */
   display: flex;

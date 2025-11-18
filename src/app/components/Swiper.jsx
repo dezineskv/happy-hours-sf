@@ -46,12 +46,6 @@ export default function App() {
             className="w-[250px] h-[167px] overflow-hidden"
           />
         </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://images.unsplash.com/photo-1634003311194-152e30e732f7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWFyZ2FyaXRhfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=400"
-            alt="swiper"
-          />
-        </SwiperSlide>
 
       </Swiper>
     </>

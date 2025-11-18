@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Avatars() {
   return (
-    <div className="flex min-w-screen flex-col items-center justify-center py-10 sm:px-8 bg-background dark:bg-black mx-auto">
+    <div className="flex min-w-screen flex-col items-center justify-center py-10 mt-8 sm:px-8 bg-background dark:bg-black mx-auto">
       <div className="avatar-group -space-x-6 mb-6">
         <div className="avatar">
           <div className="w-12">
