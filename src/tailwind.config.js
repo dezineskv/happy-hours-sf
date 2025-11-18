@@ -1,6 +1,7 @@
 // tailwind.config.js
 module.exports = {
-  darkMode: ["selector", '[data-theme="dark"]'], // Important for DaisyUI theme switching
+  // darkMode: ["selector", '[data-theme="dark"]'], // Important for DaisyUI theme switching
+  darkMode: "class",
 
   theme: {
     extend: {

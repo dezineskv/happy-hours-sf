@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning ata-theme="synthwave">
       <head>
         <Script
           type="text/javascript"
@@ -19,13 +19,8 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="m-0 p-0 bg-background text-black dark:bg-black dark:text-white w-screen">
-        <ThemeProvider
-          attribute="data-theme"
-          defaultTheme="synthwave"
-          enableSystem
-          disableTransitionOnChange
-        >
- {children}
+        <ThemeProvider attribute="class" defaultTheme="system">
+          {children}
         </ThemeProvider>
       </body>
     </html>
