@@ -60,7 +60,10 @@ export default function App() {
     <>
       <Nav />
       <div className="flex sm:w-full min-w-screen min-h-screen flex-col items-center justify-center font-sans bg-background ">
-        <h1 className="max-w-xl text-3xl pt-6 font-semibold leading-10 tracking-tight text-white dark:text-gray-300 mx-auto text-center">
+        <h1
+          className="max-w-xl text-3xl pt-6 font-semibold leading-10 tracking-tight   text-white
+  text-shadow: 2px 2px 4px #000000 dark:text-gray-300 mx-auto text-center"
+        >
           Happy Hour Management
         </h1>
         <p className="text-white">{today}</p>

@@ -29,7 +29,7 @@ function Homer() {
         <div className="flex flex-row flex-wrap items-center sm:justify-center md:justify-between  text-base font-medium mx-auto  py-2 gap-2">
           <button
             onClick={() => setMapSrc(maps.happy)}
-            className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white"
+            className="px-1 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white shadow-2xl shadow-zinc-800 shadow-alpha-50"
             aria-label="Show happy spots"
           >
             <svg
@@ -54,7 +54,7 @@ function Homer() {
 
           <button
             onClick={() => setMapSrc(maps.beer)}
-            className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white"
+            className="px-1 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white shadow-2xl shadow-zinc-800 shadow-alpha-50"
             aria-label="Show beer spots"
           >
             <svg
@@ -80,7 +80,7 @@ function Homer() {
 
           <button
             onClick={() => setMapSrc(maps.martini)}
-            className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white"
+            className="px-1 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white shadow-2xl shadow-zinc-800 shadow-alpha-50"
             aria-label="Show martini spots"
           >
             <svg
@@ -104,7 +104,7 @@ function Homer() {
 
           <button
             onClick={() => setMapSrc(maps.wine)}
-            className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white"
+            className="px-1 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white shadow-2xl shadow-zinc-800 shadow-alpha-50"
             aria-label="Show wine spots"
           >
             <svg
@@ -129,7 +129,7 @@ function Homer() {
 
           <button
             onClick={() => setMapSrc(maps.burger)}
-            className="pl-3 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white"
+            className="px-1 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white shadow-2xl shadow-zinc-800 shadow-alpha-50"
             aria-label="Show burger spots"
           >
             <svg
@@ -142,7 +142,7 @@ function Homer() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-hamburger-icon lucide-hamburger"
+              className="lucide lucide-hamburger-icon lucide-hamburger ml-1"
             >
               <path d="M12 16H4a2 2 0 1 1 0-4h16a2 2 0 1 1 0 4h-4.25" />
               <path d="M5 12a2 2 0 0 1-2-2 9 7 0 0 1 18 0 2 2 0 0 1-2 2" />
@@ -153,7 +153,7 @@ function Homer() {
           </button>
           <button
             onClick={() => setMapSrc(maps.trash)}
-            className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
+            className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white shadow-2xl shadow-zinc-800 shadow-alpha-50"
             aria-label="Show open bars"
           >
             <svg
@@ -176,7 +176,7 @@ function Homer() {
           </button>
           <button
             onClick={() => setMapSrc(maps.dine)}
-            className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500"
+            className="px-2 py-1 border border-1-black rounded hover:bg-gray-300 dark:hover:bg-zinc-900 active:bg-gray-500 text-white shadow-2xl shadow-zinc-800 shadow-alpha-50"
             aria-label="Show open restaurants"
           >
             <svg
